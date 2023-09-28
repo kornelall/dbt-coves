@@ -234,6 +234,8 @@ class GenerateSourcesTask(BaseGenerateTask):
                     options,
                     json_cols=nested,
                 )
+            else:
+                self.render_templates(relation, columns, destination, options)
         else:
             self.render_templates(relation, columns, destination, options)
 
